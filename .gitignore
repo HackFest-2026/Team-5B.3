@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+*.local
+
+*.before-esbuild-fix
+*.before-esbuild-fix
+*.before-esbuild-fix

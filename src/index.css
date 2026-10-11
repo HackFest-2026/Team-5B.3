@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-espresso: #3E362E;
+  --color-walnut: #865D36;
+  --color-mocha: #93785B;
+  --color-sand: #AC8968;
+  --color-taupe: #A69080;
+  --color-linen: #F5F1ED;
+  --color-cream: #FAF8F6;
+  --color-sand-light: #E6DCD2;
+  --color-price-down: #4F6B3A;
+  --color-price-up: #A3431F;
+  --color-error: #9B2C2C;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --espresso: #3E362E;
+  --walnut: #865D36;
+  --mocha: #93785B;
+  --sand: #AC8968;
+  --taupe: #A69080;
+  --linen: #F5F1ED;
+  --cream: #FAF8F6;
+  --sand-light: #E6DCD2;
+  --price-down: #4F6B3A;
+  --price-up: #A3431F;
+  --error: #9B2C2C;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--linen);
+  color: var(--espresso);
+}
+
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.tabular-nums {
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.glass-card {
+  background: rgba(62, 54, 46, 0.88);
+  border: 1px solid rgba(250, 248, 246, 0.16);
+  border-radius: 4px;
+  color: var(--cream);
+}
+
+@supports (backdrop-filter: blur(16px)) {
+  .glass-card {
+    background: rgba(62, 54, 46, 0.56);
+    backdrop-filter: blur(16px) saturate(1.1);
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: #FFFFFF !important;
+    color: #3E362E !important;
+  }
+}
